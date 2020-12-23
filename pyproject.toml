@@ -13,7 +13,6 @@ requests = "*"
 matplotlib = "*"
 lxml = "*"
 descartes = "*"
-json = "*"
 
 [tool.poetry.dev-dependencies]
 sphinx = "^3.4.0"
