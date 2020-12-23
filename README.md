@@ -7,7 +7,7 @@ This package helps users more easily visualize maps using Census Population Esti
 ## Installation
 
 ```bash
-$ pip install -i https://test.pypi.org/simple/ censusviz
+pip install censusviz
 ```
 ## Dependencies
 
