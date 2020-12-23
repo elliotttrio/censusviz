@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "censusviz"
-version = "0.1.7"
+version = "0.1.8"
 description = "A Python package to make it easier to visualize Census data."
 authors = ["Elliott <eat2153@columbia.edu>"]
 license = "MIT"
 readme = "README.md"
-documentation = 'https://censusviz.readthedocs.io'
+documentation = 'https://github.com/elliotttrio/censusviz/blob/main/README.md'
 homepage = "https://github.com/elliotttrio/censusviz"
 repository = "https://github.com/elliotttrio/censusviz"
 
