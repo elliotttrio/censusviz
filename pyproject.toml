@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "censusviz"
-version = "0.1.4"
+version = "0.1.6"
 description = "A Python package to make it easier to visualize Census data."
 authors = ["Elliott <eat2153@columbia.edu>"]
 license = "MIT"

@@ -24,6 +24,28 @@ pip install censusviz
 - descartes 
 - lxml
 
+## Usage
+
+```jupyter
+from censusviz import censusviz
+
+# example functions
+
+geocenpy.list_geoparams()
+
+geocenpy.get_geocen_df(quality = "20m", year = "2010", area_type= "county")
+
+geocenpy.get_geocen_plot(quality ="20m", year="2010", area_type="county", boundaries=False)
+
+geocenpy.get_pop(api_key = my_api_key, year="2019", map = True)
+
+geocenpy.get_house_est(api_key = my_api_key, year="2019", map = True)
+
+geocenpy.get_region_pop(api_key = my_api_key, year="2019", map = True)
+
+geocenpy.get_state_pop(api_key = my_api_key, year="2019", state_fip = "29", map = True)
+
+```
 
 ## Documentation
 
