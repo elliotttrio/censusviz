@@ -25,9 +25,9 @@ Parameters (optional):
 
 
 ```
-censusviz.list_geoparam()
+censusviz.list_geoparams()
 
-censusviz.list_geoparam(year = 2010)
+censusviz.list_geoparams(year = "2010")
 ```
 ### Return a Geopandas dataframe
 The ```get_geocen_df``` function returns a geopandas.GeoDataFrame of Census cartographic files. 
@@ -38,7 +38,7 @@ Parameters:
 - area_type: a stringe value of the geography area value you would like to specify. 
 
 ```
-geocenpy.get_geocen_df(quality = "20m", year = "2010", area_type= "county")
+censusviz.get_geocen_df(quality = "20m", year = "2010", area_type= "county")
 ```
 ### Return State Identifiers
 The ```get_state_ids``` function returns a pandas.DataFrame of state-related federal codes such as FIPS and USPS codes.

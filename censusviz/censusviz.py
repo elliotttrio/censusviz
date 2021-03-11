@@ -1,5 +1,7 @@
+import geopandas as gpd
 import urllib.request
 import json
+import base64
 import pandas as pd
 import matplotlib.pyplot as plt
 import descartes
@@ -193,8 +195,7 @@ def get_pop(api_key, year = str(), map = bool()):
         pop_url = f'http://api.census.gov/data/{year}/pep/population?get=POP&for=state:*&key={api_key}'
         r = requests.get(pop_url)
         data = json.loads(r.content) 
-        pop_df = pd.DataFrame(data[1:], columns=data[0]).\
-            rename(columns={"POP": "Pop_Count", "state": "STATEFP"})
+        pop_df = pd.DataFrame(data[1:], columns=data[0]).rename(columns={"POP": "Pop_Count", "state": "STATEFP"})
         pop_df['Pop_Count'] = pop_df['Pop_Count'].astype(str).astype(int)
         geodata_url = f"https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/20m/{year}/state.json"
         geo_df = gpd.read_file(geodata_url)
@@ -244,8 +245,7 @@ def get_house_est(api_key, year = str(), map = bool()):
         house_url = f'http://api.census.gov/data/{year}/pep/housing?get=HUEST&for=state:*&key={api_key}'
         r = requests.get(house_url)
         data = json.loads(r.content) 
-        house_df = pd.DataFrame(data[1:], columns=data[0]).\
-            rename(columns={"HUEST": "Housing_Estimates", "state": "STATEFP"})
+        house_df = pd.DataFrame(data[1:], columns=data[0]).rename(columns={"HUEST": "Housing_Estimates", "state": "STATEFP"})
         house_df['Housing_Estimates'] = house_df['Housing_Estimates'].astype(str).astype(int)
         geodata_url = f"https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/20m/{year}/state.json"
         geo_df = gpd.read_file(geodata_url)
@@ -294,8 +294,7 @@ def get_region_pop(api_key, year = str(), map = bool()):
         pop_url = f'http://api.census.gov/data/{year}/pep/population?get=POP&for=REGION:*&key={api_key}'
         r = requests.get(pop_url)
         data = json.loads(r.content) 
-        pop_df = pd.DataFrame(data[1:], columns=data[0]).\
-            rename(columns={"POP": "Pop_Count", "region": "REGIONCE"})
+        pop_df = pd.DataFrame(data[1:], columns=data[0]).rename(columns={"POP": "Pop_Count", "region": "REGIONCE"})
         pop_df['Pop_Count'] = pop_df['Pop_Count'].astype(str).astype(int)
         geodata_url = f"https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/20m/{year}/region.json"
         geo_df = gpd.read_file(geodata_url)
@@ -347,8 +346,7 @@ def get_state_pop(api_key, year = str(), state_fip = str(), map = bool()):
         pop_url = f'http://api.census.gov/data/{year}/pep/population?get=POP&for=COUNTY&in=state:*&key={api_key}'
         r = requests.get(pop_url)
         data = json.loads(r.content) 
-        pop_df = pd.DataFrame(data[1:], columns=data[0]).\
-            rename(columns={"POP": "Pop_Count", "state": "STATEFP", "county": "COUNTYFP"})
+        pop_df = pd.DataFrame(data[1:], columns=data[0]).rename(columns={"POP": "Pop_Count", "state": "STATEFP", "county": "COUNTYFP"})
         pop_df['Pop_Count'] = pop_df['Pop_Count'].astype(str).astype(int)
         pop_df = pop_df[pop_df.STATEFP == state_fip]
         geodata_url = f"https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/20m/{year}/county.json"
