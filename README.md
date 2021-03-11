@@ -79,6 +79,8 @@ censusviz.get_pop(api_key = my_api_key, year="2018", map = False)
 censusviz.get_pop(api_key = my_api_key, year="2019", map = True)
 ```
 
+![](https://github.com/elliotttrio/censusviz/blob/bb9fd0b0ca36843a051d9da57e4c5032af1561cd/screenshots/get_pop.PNG?raw=true)
+
 ### Return Population Data with Map (By Region)
 The ```get_region_pop``` function function returns a choropleth map in matplotlib.pyplot.plot format or a geopandas.GeoDataFrame of the U.S. population by year and region. It utilizes the U.S. Census Bureau Population Estimate API and the Census GeoJSON database on GitHub.
 
@@ -92,6 +94,9 @@ censusviz.get_region_pop(api_key = my_api_key, year="2016", map = False)
 
 censusviz.get_region_pop(api_key = my_api_key, year="2019", map = True)
 ```
+
+![](https://github.com/elliotttrio/censusviz/blob/bb9fd0b0ca36843a051d9da57e4c5032af1561cd/screenshots/get_region_pop.PNG?raw=true)
+
 
 ### Return Population Data with Map (By State)
 The ```get_state_pop``` function returns a choropleth map in matplotlib.pyplot.plot format or a geopandas.GeoDataFrame of the U.S. population by year and state. It utlizes the U.S. Census Bureau Population Estimate API and the Census GeoJSON database on GitHub.
@@ -108,6 +113,8 @@ censusviz.get_state_pop(api_key = my_api_key, year="2016", state_fip = "15", map
 censusviz.get_state_pop(api_key = my_api_key, year="2019", state_fip = "29", map = True)
 ```
 
+![](https://github.com/elliotttrio/censusviz/blob/bb9fd0b0ca36843a051d9da57e4c5032af1561cd/screenshots/get_state_pop.PNG?raw=true)
+
 ### Return Housing Unit Estimation Data with Map
 
 The ```get_house_est``` returns a choropleth map in matplotlib.pyplot.plot format or a geopandas.GeoDataFrame of the U.S. housing estimates by year. It utlizes the U.S. Census Bureau Housing Unit Estimate API and the Census GeoJSON database on GitHub.
@@ -122,6 +129,8 @@ censusviz.get_house_est(api_key = my_api_key, year="2018", map = False)
 
 censusviz.get_house_est(api_key = my_api_key, year="2019", map = True)
 ```
+
+![](https://github.com/elliotttrio/censusviz/blob/bb9fd0b0ca36843a051d9da57e4c5032af1561cd/screenshots/get_house_est.PNG?raw=true)
 
 ## **Dependencies**
 
